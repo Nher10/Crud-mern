@@ -12,7 +12,9 @@ const app = express();
 connectDB();
 
 //middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://crudoperationv-mern1.netlify.app'
+}));
 app.use(express.json());
 app.use(morgan("dev"));
 
